@@ -20,17 +20,7 @@
         <jelastic.context>gameoflife</jelastic.context>
         <jelastic.environment>wakaleo</jelastic.environment>
     </properties>
- <distributionManagement>
-  <repository>
-  <id>releases/id>
-  <url>http://10.0.21.10:8081/nexus/content/repositories/releases/</url>
- </repository>
-  <snapshotRepository>
-  <id>101</id>
-     <url>http://10.0.21.10:8081/nexus/content/repositories/101/</url>
-     <uniqueVersion>false</uniqueVersion>
-   </snapshotRepository>
-  </distributionManagement>
+ 
 
     <scm>
         <connection>scm:git:git@github.com:${github.account}/game-of-life.git</connection>
@@ -222,6 +212,19 @@
         <module>gameoflife-core</module>
         <module>gameoflife-web</module>
     </modules>
+    
+    <distributionManagement>
+  <repository>
+  <id>releases/id>
+  <url>http://10.0.21.10:8081/nexus/content/repositories/releases/</url>
+ </repository>
+  <snapshotRepository>
+  <id>101</id>
+     <url>http://10.0.21.10:8081/nexus/content/repositories/101/</url>
+     <uniqueVersion>false</uniqueVersion>
+   </snapshotRepository>
+  </distributionManagement>
+        
     <profiles>
         <profile>
             <id>development</id>
